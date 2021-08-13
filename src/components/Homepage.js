@@ -22,7 +22,7 @@ class Homepage extends Component {
               <li>
               
                   <Link to='new-beer'>
-                  <img src="../assets/random-beer.png" alt="random beer"/> \
+                  <img src="../assets/random-beer.png" alt="random beer"/>
                   </Link>
               </li>
             </ul>

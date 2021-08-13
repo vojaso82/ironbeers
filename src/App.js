@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import Homepage from './components/Homepage';
+import Beers from './components/Beers';
+import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
+
+
+
 
 class App extends React.Component {
   render(){
@@ -10,11 +16,12 @@ class App extends React.Component {
 
     return (
       <div className="App">   
-      <Homepage/>  
+      
       <Switch>
-         <Route exact path='/beers'/>
-         <Route exact path='/random-beer'/>
-         <Route exact path='/new-beer'/>
+         <Route exact path='/' render={(props) => <Homepage dog="german shepard" {...props}/>} /> 
+         <Route exact path='/beers' render={(props) => <Beers dog="pit bull" {...props}/>} />
+         <Route exact path='/random-beer' render={(props) => <RandomBeer dog="great dane" {...props}/>}/>
+         <Route exact path='/new-beer' render={(props) => <NewBeer dog="husky" {...props}/>}/>
       </Switch>
       </div>
     );
