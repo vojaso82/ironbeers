@@ -4,15 +4,17 @@ import axios from 'axios';
 import { thisExpression } from '@babel/types';
 import { Link } from 'react-router-dom';
 
+
 class Beers extends Component {
 state = {
-    beers:[]
+    beers:[],
+    name: ""
 }
 
 componentDidMount(){
     axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
     .then(response=>{
-        console.log(response.data)
+        // console.log(response.data)
     this.setState({
         beers: response.data
     })
@@ -31,11 +33,27 @@ allBeers = () => {
         )
     })
 }
+
+handleChange = (e) => {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`)
+    .then(response => {
+        this.setState({
+            beers: response.data
+        })
+    })
+}
+
+
     render() {
         return (
+            
             <div>
                <HomeButton/>
-                {this.allBeers()}
+              
+               <input onChange={e=> this.handleChange(e)} name="name" type="text" placeholder="beerName"/>
+
+              
+               {this.allBeers()}
             </div>
         )
     }
