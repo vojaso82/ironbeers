@@ -31,10 +31,6 @@ allBeers = () => {
         )
     })
 }
-
-
-
-
     render() {
         return (
             <div>

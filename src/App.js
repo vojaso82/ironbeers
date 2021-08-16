@@ -23,7 +23,7 @@ class App extends React.Component {
          <Route exact path='/beers' render={(props) => <Beers dog="placeholder" {...props}/>} />
          <Route exact path='/random-beer' render={(props) => <RandomBeer dog="placeholder" {...props}/>}/>
          <Route exact path='/new-beer' render={(props) => <NewBeer dog="placeholder" {...props}/>}/>
-         <Route exact path='/beer/:id' render={(props) => <BeerDetails dog="placeholder" {...props}/>}/>
+         <Route exact path='/beers/:id' render={(props) => <BeerDetails dog="placeholder" {...props}/>}/>
       </Switch>
       </div>
     );
