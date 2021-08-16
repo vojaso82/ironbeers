@@ -6,7 +6,7 @@ const HomeButton = () => {
     
         return (
             <div>
-                <Link to='/'> JUST A TEST FOR GITHUB TOKEN 🏞</Link>
+                <Link to='/'> HOME 🏞</Link>
             </div>
         )
     

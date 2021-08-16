@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
+import BeerDetails from'./components/BeerDetails';
 
 
 
@@ -18,10 +19,11 @@ class App extends React.Component {
       <div className="App">   
       
       <Switch>
-         <Route exact path='/' render={(props) => <Homepage dog="german shepard" {...props}/>} /> 
-         <Route exact path='/beers' render={(props) => <Beers dog="pit bull" {...props}/>} />
-         <Route exact path='/random-beer' render={(props) => <RandomBeer dog="great dane" {...props}/>}/>
-         <Route exact path='/new-beer' render={(props) => <NewBeer dog="husky" {...props}/>}/>
+         <Route exact path='/' render={(props) => <Homepage dog="placeholder" {...props}/>} /> 
+         <Route exact path='/beers' render={(props) => <Beers dog="placeholder" {...props}/>} />
+         <Route exact path='/random-beer' render={(props) => <RandomBeer dog="placeholder" {...props}/>}/>
+         <Route exact path='/new-beer' render={(props) => <NewBeer dog="placeholder" {...props}/>}/>
+         <Route exact path='/beer/:id' render={(props) => <BeerDetails dog="placeholder" {...props}/>}/>
       </Switch>
       </div>
     );
